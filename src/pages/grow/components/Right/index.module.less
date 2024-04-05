@@ -1,0 +1,225 @@
+.right-search {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 100px;
+  display: inline-block;
+  background: #FFFFFF;
+  border-radius: 16px 16px 24px 16px;
+  width: 275px;
+  padding: 20px 14px 20px 20px;
+  flex-shrink: 0;
+
+  .search-input-box {
+    width: 100%;
+    height: 48px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    padding: 12px 16px 12px 20px;
+
+    .search-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .search-input {
+      width: 100%;
+      border: none;
+      outline: none;
+
+      &::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0.3);
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .clear-box {
+        transition: .4s cubic-bezier(.625, .045, .355, 1);
+        width: 14px;
+        height: 14px;
+        background: #cad3c3;
+        margin-top: 8px;
+        position: absolute;
+        right: 0;
+        border-radius: 100%;
+
+        // 画叉的部分
+        &::after {
+          width: 8px;
+          position: absolute;
+          height: 1.5px;
+          background: #fff;
+          content: "";
+          top: 6.5px;
+          left: 3.5px;
+          transform: rotate(134deg);
+          -ms-transform: rotate(134deg);
+          -moz-transform: rotate(134deg);
+          -webkit-transform: rotate(134deg);
+          -o-transform: rotate(134deg);
+        }
+
+        &::before {
+          width: 8px;
+          position: absolute;
+          height: 1.5px;
+          background: #fff;
+          content: "";
+          top: 6.5px;
+          left: 3.5px;
+          transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+        }
+      }
+    }
+
+    &.active {
+      border: 1px solid #34D026;
+    }
+  }
+
+  .options-tags {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+    .tabs {
+      .tab-title {
+        display: flex;
+        align-items: center;
+
+        >img {
+          width: 20px;
+          height: 20px;
+          margin-right: 4px;
+        }
+
+        >span {
+          color: rgba(0, 0, 0, 0.8);
+          font-weight: 700;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .new-tab-box {
+    .new-tab-list {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+
+      .new-tab-option {
+        height: 36px;
+        background: rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 0 11px;
+        margin-right: 16px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+
+        >img {
+          width: 20px;
+          height: 20px;
+          margin-right: 4px;
+        }
+
+        >span {
+          color: rgba(0, 0, 0, 0.6);
+          font-weight: 700;
+          font-size: 16px;
+        }
+
+        &.active {
+          background: #34D026;
+
+          >span {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .sub-tab-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+
+    .tab-option {
+      padding: 6px 12px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.3);
+      margin: 0 8px 8px 0;
+      cursor: pointer;
+      position: relative;
+
+      >img {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: -6px;
+        right: -6px;
+        display: none;
+      }
+
+      &:hover {
+        >img {
+          display: inline-block;
+        }
+
+        color: #112438;
+      }
+    }
+  }
+}
+
+.company-info {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.history-clear-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #34D026;
+  border: 1px solid #34D026;
+  border-radius: 8px;
+  height: 32px;
+  padding-right: 12px;
+  // width: 102px;
+  cursor: pointer;
+  margin-top: 11px;
+
+  &:hover {
+    background: #27C019;
+  }
+
+  >img {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    margin-left: 10px;
+  }
+
+  >span {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+  }
+}

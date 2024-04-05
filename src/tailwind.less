@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-8 px-16 leading-[1.2] bg-primary text-white rounded-6;
+  }
+  .btn-primary.disabled {
+    @apply !bg-primary/40 pointer-events-none;
+  }
+
+  .btn-outline {
+    @apply btn-primary bg-transparent text-primary outline outline-1 outline-primary outline-offset-0;
+  }
+
+  .btn-gray {
+    @apply btn-primary text-text/60 bg-text/8 outline-1 outline-text/16 outline;
+  }
+
+  .absolute-center {
+    @apply absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}

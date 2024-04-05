@@ -1,0 +1,221 @@
+.img-list {
+  display: flex;
+  flex-wrap: wrap;
+  // margin-top: 12px;
+  // margin-bottom: 16px;
+  width: 100%;
+  // justify-content: space-between;
+  transition: all 1s;
+  max-height: 500px;
+  overflow: hidden;
+
+  &.hide {
+    height: 48px;
+    border-radius: 4px;
+    position: relative;
+    max-height: 48px;
+
+    .hide-mask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(17, 36, 56, 0.6);
+      backdrop-filter: blur(2px);
+      border-radius: 4px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      >span {
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+        margin-right: 6px;
+      }
+
+      &:hover {
+        background: rgba(17, 36, 56, 0.8);
+
+        >span {
+          color: #34D026;
+        }
+
+        >img {
+          content: url(./viewpicture-enter.svg);
+        }
+      }
+    }
+  }
+
+  .img-warp {
+    border: 1px solid rgba(17, 36, 56, .06);
+    border-radius: 4px;
+  }
+
+  .none {
+    display: none;
+  }
+
+  &.one {
+    .img-warp {
+      position: relative;
+      width: 100%;
+      // height: 178px;
+      height: 0;
+      // 百分比：图像的高度除以其自身的宽度，然后乘以100
+      margin-bottom: 9px;
+
+      .img-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        // height: 110px;
+      }
+    }
+  }
+
+  &.two {
+    .img-warp {
+      position: relative;
+      width: 100%;
+      height: 0;
+      margin-bottom: 9px;
+
+      .img-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        // height: 110px;
+      }
+    }
+  }
+
+  &.three {
+    .img-warp {
+      position: relative;
+      width: 100%;
+      height: 440px;
+      margin-bottom: 9px;
+
+      &::after {
+        content: 'long picture';
+        height: 32px;
+        position: absolute;
+        width: 104px;
+        background: rgba(17, 36, 56, 0.4);
+        border-radius: 50px;
+        top: 12px;
+        right: 12px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      .img-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        // height: 110px;
+      }
+    }
+  }
+
+  &.four {
+
+    .img-warp {
+      position: relative;
+      width: 48.5%;
+      height: 0px;
+      padding-top: 48.5%; // padding-bottom都可以
+      margin-bottom: 9px;
+      margin-right: 3%;
+
+      .img-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        // height: 110px;
+      }
+
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &.five {
+    .img-warp {
+      position: relative;
+      width: 31.33%;
+      height: 0px;
+      padding-top: 33.3%; // padding-bottom都可以
+      margin-bottom: 9px;
+      margin-right: 3%;
+
+      .img-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+
+        // height: 110px;
+      }
+
+      .img-mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 22;
+        background: rgba(17, 36, 56, 0.6);
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  >img {
+    width: 100%;
+    // height: 360px;
+  }
+
+  .many-img {
+    width: 116px;
+    height: 116px;
+    border-radius: 6px;
+    margin-right: 9px;
+    margin-bottom: 9px;
+  }
+}

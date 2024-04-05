@@ -1,0 +1,89 @@
+@import './tailwind.less';
+
+body {
+  font-size: 14px;
+  font-family: 'Inter';
+}
+
+img {
+  display: initial;
+}
+
+.App {
+  color: #112438;
+}
+
+a {
+  color: #34D026;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+svg path {
+  fill: currentColor;
+}
+
+input {
+  outline: none;
+}
+
+:where(.css-dev-only-do-not-override-1mqg3i0).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+  border-color: #34D026;
+  background-color: #34D026;
+}
+
+:where(.css-dev-only-do-not-override-1mqg3i0).ant-radio-wrapper:hover .ant-radio-inner {
+  border-color: #34D026;
+}
+
+input::-ms-reveal { display: none; }
+input[type="search"]::-webkit-search-cancel-button { display: none; }
+
+.active-shadow {
+  transition: box-shadow 300ms;
+}
+
+.active-shadow:hover {
+  z-index: 1;
+}
+
+.active-shadow:active {
+  transition: none;
+  box-shadow: 0 0 0 6px #00000010;
+  z-index: 1;
+}
+
+button {
+  @apply active-shadow;
+}
+
+img {
+  @apply active-shadow;
+}
+
+.active-shadow img, .active-bg img, img.active-bg {
+  box-shadow: unset;
+}
+
+* {
+  /* outline-style: solid; */
+  outline-color: #34D02680;
+  outline-offset: -2px;
+}
+
+.active-bg {
+  transition: background-color 300ms;
+}
+
+.active-bg:active {
+  background-color: #00000010;
+  transition: none;
+}
+
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}

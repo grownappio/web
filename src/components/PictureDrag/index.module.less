@@ -1,0 +1,75 @@
+.wrapper {
+  overflow: hidden;
+  // margin: 100px auto;
+  padding: 10px 0;
+  background: #fff;
+  border-radius: 5px;
+  min-height: 100px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  position: relative;
+}
+
+.item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  border-radius: 6px;
+
+  >img {
+    width: 80PX;
+    height: 80PX;
+    border-radius: 6px;
+  }
+
+  .del-img {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    right: -10px;
+    position: absolute;
+    cursor: pointer;
+
+    &:hover {
+      content: url(../../assets/img/publish/img-del-enter.svg);
+    }
+  }
+}
+
+.draggingItem {
+  transform: scale(1.06);
+  opacity: .7;
+}
+
+.upload-btn {
+  position: absolute;
+  display: flex;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid rgba(17, 36, 56, 0.08);
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  width: 80PX;
+  height: 80PX;
+  cursor: pointer;
+
+  >img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    border: 1px solid #34D026;
+
+    >img {
+      content: url(../../assets//img/publish/upload-image-enter.svg);
+    }
+  }
+}

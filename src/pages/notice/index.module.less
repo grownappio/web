@@ -1,0 +1,31 @@
+.notice-box {
+  background: #f6f6f7;
+
+  .filter-box {
+    margin: 16px 0 0 24px;
+  }
+
+  :global {
+    .ant-tabs-nav {
+      margin: 0;
+      padding: 0 32px;
+      height: 60px;
+    
+      &::before {
+        border-bottom: 0 !important;
+      }
+    
+      .ant-tabs-ink-bar {
+        height: 2px;
+        bottom: unset !important;
+        align-self: center !important;
+        transform: translateY(14px) !important;
+        background: #34D026 !important;
+      }
+    }
+    
+    .ant-tabs-content-holder {
+      display: none;
+    }
+  }
+}

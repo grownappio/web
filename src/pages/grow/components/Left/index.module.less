@@ -1,0 +1,37 @@
+.left-tab {
+
+  width: 210px;
+  flex-shrink: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 100px;
+
+  .tab-item {
+    display: flex;
+    align-items: center;
+    width: 211px;
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+
+    &.active {
+      border-radius: 16px;
+      background: #34D026;
+      color: #fff;
+    }
+
+    >img {
+      height: 24px;
+      width: 24px;
+      margin-right: 13px;
+    }
+    &:hover{
+      background: #1124380A;
+      border-radius: 16px;
+    }
+    &.active:hover{
+      background: #34D026;
+    }
+  }
+}

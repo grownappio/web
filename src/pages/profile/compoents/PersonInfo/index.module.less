@@ -1,0 +1,73 @@
+.person-info {
+  .information {
+    position: relative;
+
+    .header-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -22px;
+      padding: 2px;
+      width: 60px;
+      height: 60px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ECEDEF;
+      box-shadow: 6px 12px 14px -4px #00000020;
+    }
+
+    .information-content {
+      clear: both;
+
+      .sex-address {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+
+        >div {
+          display: flex;
+          align-items: center;
+
+          &:nth-child(2) {
+            margin-left: 40px;
+          }
+
+          >img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+          }
+
+          >span {
+            color: #112438;
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .list {
+    display: flex;
+    margin-top: 16px;
+    font-weight: 500;
+
+    .option {
+      padding: 6px 12px;
+      margin-right: 6px;
+      max-width: 102px;
+      overflow: hidden;
+      border-radius: 4px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #11243899;
+      background: rgba(17, 36, 56, .04);
+    }
+  }
+
+  .speciality-box {
+    margin-right: 40px;
+  }
+}

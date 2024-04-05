@@ -1,0 +1,88 @@
+.emoji-box {
+  position: absolute;
+  bottom: -72px;
+  left: 35px;
+  border: 2px solid rgba(52, 208, 38, 0.3);
+  border-radius: 8px;
+  height: 60px;
+  z-index: 122;
+
+  &.normal {
+    &::after {
+      content: '';
+      width: 12.7px;
+      height: 12.7px;
+      background: #FFFFFF;
+      border-radius: 1px;
+      transform: rotate(45deg);
+      border-top: 3px solid rgba(52, 208, 38, 0.3);
+      border-left: 3px solid rgba(52, 208, 38, 0.3);
+      position: absolute;
+      top: -8px;
+      left: 32px;
+    }
+  }
+
+  &.atop {
+    top: -69px;
+    left: -13px;
+
+    &::after {
+      content: '';
+      width: 12.7px;
+      height: 12.7px;
+      background: #FFFFFF;
+      border-radius: 1px;
+      transform: rotate(45deg);
+      border-bottom: 3px solid rgba(52, 208, 38, 0.3);
+      border-right: 3px solid rgba(52, 208, 38, 0.3);
+      position: absolute;
+      bottom: -9px;
+      left: 24px;
+    }
+  }
+}
+
+.emoji-list {
+  width: 340px;
+  transition: height .2s;
+  height: 57px;
+  overflow: auto;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 8px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  filter: drop-shadow(0px 6px 10px rgba(0, 92, 255, 0.15));
+
+  &::-webkit-scrollbar {
+    background: #fff;
+    border-radius: 10px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    width: 4px;
+    border-radius: 10px;
+  }
+
+  .emoji-option {
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.06);
+      border-radius: 4px;
+    }
+  }
+}

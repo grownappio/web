@@ -1,0 +1,117 @@
+.select-body{
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background:white;
+   border-radius:6px;
+   outline: 1px solid  rgb(236,237,239);
+   user-select: none;
+
+   display: flex;
+   justify-content: space-between;
+   z-index: 2;
+
+   &.active{
+      outline: 1px solid rgba(52,208,38);
+      background:rgba(52, 208, 38, 0.08);
+   }
+
+
+   .content{
+      margin-left: 12px;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      .placeholder{
+        margin-bottom: 4px;
+         font-size: 12px;
+         font-weight: 500;
+         color: #11243866;
+
+      }
+      .value{
+         font-size: 14px;
+         font-weight: 500;
+         color: #112438;
+      }
+   }
+
+   >img{
+      align-self: center;
+      height: 16px;
+      width: 16px;
+      margin-right: 16px;
+      z-index: 22;
+      transition: all .3s;
+      &.active{
+         transform: rotate(180deg);
+      }
+   }
+   .select-options{
+      transition: height .3s;
+
+      border-radius: 6px;
+      border-bottom: 0.5px solid rgb(236,237,239);
+      border-left: 1px solid  rgb(236,237,239);
+      border-right: 1px solid  rgb(236,237,239);
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: calc(100% + 2px);
+      background: white;
+      overflow-y: scroll;
+      &::-webkit-scrollbar-thumb {
+         border-radius: 10px;
+         width: 6px;
+         background:rgba(219,222,225);
+         &:hover{
+            background:rgba(184,189,195);
+         }
+      }
+      &.active{
+         &::-webkit-scrollbar {
+            display: none;
+         }
+         &::-webkit-scrollbar-thumb {
+            display: none;
+         }
+         .option{
+            padding-right: 6px;
+         }
+      }
+
+      .option{
+         display: flex;
+         width: 100%;
+         background: white;
+         padding: 6px 0 6px 6px;
+
+
+         >span{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            padding-left: 6px;
+            border-radius: 6px;
+            &:hover{
+               background:rgba(52,208,38,0.06);
+               //box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+            }
+         }
+
+         &.active{
+            >span{
+               background:rgba(52,208,38,0.06);
+            }
+            //box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+         }
+      }
+      //.option:first-child{
+      //   border-radius:6px 6px 0 0;
+      //}
+      //.option:last-child{
+      //   border-radius:0 0 6px 6px;
+      //}
+   }
+}

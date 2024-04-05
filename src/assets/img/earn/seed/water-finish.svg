@@ -1,0 +1,17 @@
+<svg width="32" height="28" viewBox="0 -2 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8">
+<g opacity="0.3" filter="url(#filter0_f_1_5571)">
+<ellipse cx="16" cy="22.5" rx="12" ry="1.5" fill="#34D026"/>
+</g>
+<path opacity="0.6" d="M7.91974 2C6.98393 2 6.08555 2.13008 5.2246 2.39024C5.07487 3.21409 5 4.0813 5 4.99187C5 12.1897 10.016 18 16.2298 18C17.0907 18 17.7139 17.7168 18.5 17.5C18.6872 16.5894 18.9998 15.832 18.9998 14.878C19.0372 7.76694 14.0587 2 7.91974 2Z" fill="white"/>
+<path d="M24.0803 2C25.0161 2 25.9145 2.13008 26.7754 2.39024C26.9251 3.21409 27 4.0813 27 4.99187C27 12.1897 21.984 18 15.7702 18C14.9093 18 14.0483 17.8699 13.2622 17.6531C13.0751 16.7425 13.0002 15.832 13.0002 14.878C12.9628 7.76694 17.9413 2 24.0803 2Z" fill="white"/>
+<path d="M15.121 21.981C14.5308 22.0964 13.9405 21.6733 13.8298 21.0579L13.0182 16.3652C12.9075 15.7498 13.3134 15.1344 13.9036 15.019C14.4939 14.9036 15.0841 15.3267 15.1948 15.9421L15.9695 20.6348C16.1171 21.2887 15.7113 21.8656 15.121 21.981Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_f_1_5571" x="0" y="17" width="32" height="11" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_1_5571"/>
+</filter>
+</defs>
+</svg>

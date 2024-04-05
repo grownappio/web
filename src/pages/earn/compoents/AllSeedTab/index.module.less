@@ -1,0 +1,35 @@
+ .all-seed-tab {
+   padding: 16px 12px;
+   background: #fff;
+   border-top: 1px solid rgba(17, 36, 56, 0.08);
+   overflow: auto;
+
+   &.shadow {
+     // box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+     border-radius: 0 0 6px 6px;
+   }
+
+   .tab-list {
+     display: flex;
+
+     .tab-option {
+       // background: rgba(17, 36, 56, 0.08);
+       border: 1px solid rgba(17, 36, 56, 0.08);
+       border-radius: 6px;
+       height: 32px;
+       padding: 0 16px;
+       color: rgba(17, 36, 56, 0.4);
+       font-weight: 500;
+       font-size: 14px;
+       text-align: center;
+       line-height: 32px;
+       margin-right: 8px;
+       cursor: pointer;
+
+       &.active {
+         border: 1px solid #34D026;
+         color: #34D026;
+       }
+     }
+   }
+ }

@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div,
+view {
+  box-sizing: border-box;
+}
+
+a {
+  color: #34D026;
+}

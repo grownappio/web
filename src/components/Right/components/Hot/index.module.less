@@ -1,0 +1,335 @@
+.hot-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #11243814;
+  border-radius: 8px;
+  margin-top: 15px;
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #11243814;
+
+    .tab {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 3;
+      color: #707c88;
+      cursor: pointer;
+  
+      svg {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+      }
+  
+      path {
+        stroke: #707c88;
+      }
+  
+      >span {
+        margin-left: 4px;
+        font-weight: 500;
+        font-size: 14px;
+      }
+  
+      &-active {
+        color: #112438;
+
+        &::after {
+          content: ' ';
+          position: absolute;
+          right: 10px;
+          bottom: 0;
+          height: 3px;
+          width: calc(100% - 45px);
+          background: #FF7B3A;
+        }
+  
+        path {
+          stroke: #FF7B3A;
+        }
+      }
+    }
+  }
+
+  .list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .tab-option {
+      padding: 6px 12px;
+      // border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      background: rgba(17, 36, 56, 0.04);
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(17, 36, 56, 0.4);
+      margin: 0 8px 6px 0;
+      cursor: pointer;
+      position: relative;
+
+      >img {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: -6px;
+        right: -6px;
+        display: none;
+      }
+
+      &:hover {
+        background: rgba(52, 208, 38, 0.06);
+
+        >img {
+          display: inline-block;
+        }
+
+        color: #34D026;
+      }
+    }
+
+  }
+
+  .empty {
+    margin: auto;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(17, 36, 56, .4);
+
+    img{
+      display: block;
+      width: 165.6px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  .item {
+    padding: 12px 16px;
+    cursor: pointer;
+
+    &:hover {
+      background: #11243808;
+    }
+
+    &-index {
+      display: inline-block;
+      width: 22px;
+      margin-right: 6px;
+      vertical-align: middle;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 700;
+      font-style: italic;
+      line-height: 17px;
+      text-align: center;
+      color: #FF7B3A;
+
+      &.active {
+        color: #FF3D00;
+      }
+
+    }
+    
+    &-title {
+      display: inline-block;
+      vertical-align: middle;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #112438;
+      width: 180px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    
+    &-tip {
+      color: #707c88;
+    }
+    
+    &-data {
+      margin: 4px 0 0 0;
+      font-size: 12px;
+    }
+  }
+}
+
+
+.search-input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid rgba(17, 36, 56, 0.08);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  padding: 16px 12px;
+  position: relative;
+
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+  }
+
+  .input {
+    width: calc(100% - 10px);
+    height: 42px;
+    border: none;
+    outline: none;
+
+    &::-webkit-input-placeholder {
+      color: rgba(17, 36, 56, .4);
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+  .input:focus:valid+.clear-box {
+    transition: .4s cubic-bezier(.625, .045, .355, 1);
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    position: absolute;
+    right: 16px;
+    content: url(../../../../assets/img/grow/clear-input.svg);
+    cursor: pointer;
+    background: white;
+
+    &:hover {
+      content: url(../../../../assets/img/grow/clear-input-enter.svg);
+    }
+  }
+
+  &.active {
+    border: 1px solid #34D026;
+  }
+}
+
+.history-list {
+  position: absolute;
+  height: 307px;
+  width: calc(100% + 2px);
+  left: -1px;
+  top: 48px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0px 4px 16px 0px #11243829;
+  overflow-y: auto;
+  z-index: 2;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    border-radius: 10px;
+    padding-right: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(17, 36, 56, 0.15);
+    border-radius: 10px;
+    width: 6px;
+
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.24);
+    }
+  }
+
+  .history-tab-box {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      >img {
+        height: 20px;
+        width: 20px;
+        margin-right: 4px;
+      }
+
+      >history-title {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #112438;
+      }
+    }
+
+    .history-clear-all {
+      font-family: Inter;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 15px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #34D026;
+      cursor: pointer;
+    }
+  }
+
+  .history-list-box {
+
+    .history-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .history-search {
+          height: 20px;
+          width: 20px;
+          margin-right: 12px;
+        }
+
+        .history-content {
+          font-family: Inter;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 17px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: #112438;
+          width: 122px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .history-clear {
+        height: 20px;
+        width: 20px;
+
+        &.active {
+          margin-right: 10px;
+        }
+      }
+
+      &:hover {
+        background: rgba(52, 208, 38, 0.08);
+      }
+    }
+  }
+}

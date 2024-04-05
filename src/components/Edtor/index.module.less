@@ -1,0 +1,48 @@
+.toolbar {
+  font-family: inherit !important;
+
+  > * {
+    position: relative;
+    padding: 14px 0 !important;
+    width: unset !important;
+    height: 48px !important;
+    text-align: center;
+    background: #f5f6f7 !important;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 12px;
+      bottom: 12px;
+      left: 0;
+      border-left: 1px solid rgba(17, 36, 56, 0.04);
+    }
+
+    &:first-child {
+      > :first-child {
+        width: 100% !important;
+        height: 100% !important;
+        border: 0;
+        outline: 0;
+
+        &::before {
+          margin: auto;
+          vertical-align: top;
+        }
+      }
+
+      svg {
+        right: 16px !important;
+      }
+    }
+
+    > :first-child {
+      width: 18px !important;
+      height: 18px !important;
+      float: unset !important;
+      width: unset;
+      margin: 0 auto;
+    }
+  }
+}
+

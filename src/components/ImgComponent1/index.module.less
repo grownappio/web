@@ -1,0 +1,87 @@
+.error-box {
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 9px;
+  margin-top: 8px;
+  width: 161.33px;
+  height: 138.26px;
+}
+
+.loading-box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(17, 36, 56, 0.08);
+
+  >img {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+
+:global {
+  .wave :local {
+    background: linear-gradient(to bottom right, transparent 42%, rgba(255, 255, 255, .5) 50%, transparent 63%);
+    // background: red;
+    // transform-origin: 70% 70%;
+    // border: 1px solid transparent;
+    animation: wave 1s linear infinite;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+
+    10% {
+      transform: translate(-40%, -40%);
+    }
+
+    20% {
+      transform: translate(-30%, -30%);
+    }
+
+    30% {
+      transform: translate(-20%, -20%);
+    }
+
+    40% {
+      transform: translate(-10%, -10%);
+    }
+
+    50% {
+      transform: translate(0, 0);
+    }
+
+    60% {
+      transform: translate(10%, 10%);
+    }
+
+    70% {
+      transform: translate(20%, 20%);
+    }
+
+    80% {
+      transform: translate(30%, 30%);
+    }
+
+    90% {
+      transform: translate(40%, 40%);
+    }
+
+    100% {
+      transform: translate(50%, 50%);
+    }
+  }
+}

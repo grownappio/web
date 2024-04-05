@@ -1,0 +1,234 @@
+.people-list-box {
+    padding: 0 3px;
+    width: 100%;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    height: calc(100vh - 96px);
+
+}
+
+.people-list {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin: 12px 0;
+    min-height: calc(100vh - 108px);
+
+
+
+    .no-more {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        text-align: left;
+        color: rgba(17, 36, 56, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 0;
+    }
+
+    >div {
+        border-bottom: rgba(17, 36, 56, 0.08) solid 1px;
+    }
+
+    >:last-child {
+        border-bottom: none;
+    }
+
+    >:first-child {
+        border-bottom: rgba(17, 36, 56, 0.08) solid 1px;
+    }
+
+    .people-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 6px;
+        padding: 12px 10px;
+
+        .option-left {
+            display: flex;
+
+            >img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+
+            .names {
+                .nick-name {
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+
+                .name {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .option-btn {
+            width: 107px;
+            height: 36px;
+            background: #39C32D;
+            border-radius: 6px;
+            font-weight: 400;
+            font-size: 16px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &::after {
+                content: 'Follow';
+            }
+
+            &.active {
+                border: 1px solid rgba(17, 36, 56, 0.08);
+                border-radius: 6px;
+                background: rgba(17, 36, 56, 0.04);
+                color: rgba(17, 36, 56, .4);
+                ;
+
+                &::after {
+                    content: 'Following';
+                }
+
+                &:hover {
+                    content: 'Unfollow';
+                    background: rgba(241, 31, 41, 0.08);
+                    border: 1px solid rgba(241, 31, 41, 0.08);
+                    border-radius: 6px;
+                    color: #F11F29;
+
+                    &::after {
+                        content: 'Unfollow';
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            background: rgba(52, 208, 38, 0.06);
+        }
+
+    }
+
+
+}
+
+.card-box {
+    padding: 16px;
+
+    &:hover {
+        background: rgba(52, 208, 38, 0.06);
+    }
+
+    .user-header {
+        user-select: none;
+        display: flex;
+        position: relative;
+
+        >img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+
+            border: 1.5px solid #ECEDEF;
+        }
+
+        .user-info {
+            margin-left: 8px;
+
+            .name {
+                margin-bottom: 5px;
+
+                .nick-name {
+                    margin-left: 8px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: rgba(17, 36, 56, 0.6);
+                }
+            }
+
+            .extra {
+                display: flex;
+                align-content: center;
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(17, 36, 56, 0.6);
+
+                .sex {
+                    display: flex;
+                    margin-right: 26px;
+
+                    >img {
+                        align-self: center;
+                        height: 18px;
+                        width: 18px;
+                        margin-right: 6px;
+                    }
+                }
+
+                .location {
+                    display: flex;
+
+                    width: 200px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+
+                    >img {
+                        align-self: center;
+                        height: 18px;
+                        width: 18px;
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+
+        .button {
+
+            right: 0;
+            height: 36px;
+            padding: 0 25px;
+            border-radius: 6px;
+            border: none;
+            position: absolute;
+            width: 107px;
+
+            font-size: 14px;
+            font-weight: 400;
+
+            background: #34D026;
+            color: white;
+
+
+            &.active1 {
+                background: rgba(17, 36, 56, 0.06);
+                color: #112438;
+            }
+
+            &.active2 {
+                background: rgba(241, 31, 41, 0.08);
+                color: #F11F29;
+
+            }
+        }
+    }
+
+    .user-bio {
+        margin: 12px 0 0 48px;
+        width: 613px;
+        word-break: break-all;
+    }
+}

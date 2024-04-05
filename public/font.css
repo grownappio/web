@@ -1,0 +1,16 @@
+@font-face {
+  font-family: krooked;
+  src: url(./fonts/KROPHED.OTF);
+
+}
+
+
+@font-face {
+  font-family: 'SourceHanSansSC-VF';
+  src: url(./fonts/SourceHanSansSC-VF.otf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./fonts/Inter.woff2);
+}

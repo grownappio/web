@@ -1,0 +1,79 @@
+.search-tab {
+  height: 96px;
+  margin: 0 12px;
+  background: #FFFFFF;
+  border-radius: 0px 0px 6px 6px;
+  position: relative;
+  z-index: 23;
+
+  &.show-shadow {
+    box-shadow: 0px 6px 8px rgba(17, 36, 56, 0.08);
+  }
+
+  .seacrh--top {
+    position: relative;
+    text-align: start;
+    padding: 20px 0 16px 0;
+
+    >img {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 12px;
+      top: 10px;
+      cursor: pointer;
+
+      &:hover {
+        content: url(../.././../../assets/img/grow/return-enter.svg);
+      }
+    }
+
+    >span {
+      font-weight: 600;
+      font-size: 16px;
+      color: #112438;
+
+      margin-left: 60px;
+    }
+  }
+}
+
+.top-tab-box {
+  background: #fff;
+  border-radius: 0px 0px 8px 8px;
+  display: flex;
+  padding: 0 170px;
+  align-items: center;
+  justify-content: space-between;
+
+  .tab-option {
+    position: relative;
+    padding-bottom: 22px;
+    display: flex;
+    align-items: center;
+
+    >span {
+      font-weight: 500;
+      font-size: 14px;
+      color: rgba(17, 36, 56, 0.4);
+      cursor: pointer;
+    }
+
+    &.active {
+      >span {
+        color: #34D026;
+      }
+
+      &::after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background: #34D026;
+        border-radius: 10px 10px 0px 0px;
+      }
+    }
+  }
+}

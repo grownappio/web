@@ -1,0 +1,114 @@
+// 分割线
+.divider {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0;
+  box-sizing: border-box;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    background: rgba(17, 36, 56, 0.06);
+    height: 1px;
+    width: 60%;
+  }
+}
+
+// 话题
+.rich-topic {
+  display: inline-block;
+}
+
+.iconImgDiv {
+  width: 28px;
+  height: 28px;
+  margin: 0 !important;
+  vertical-align: -8px;
+  margin: 0 4px !important;
+}
+
+// 问题 答案卡片
+
+.answer-question-card {
+
+  span,
+  div,
+  p,
+  h4 {
+    color: rgba(17, 36, 56, 0.6) !important;
+  }
+
+  ol,
+  ul {
+    font-size: 14px !important;
+    color: rgba(17, 36, 56, 0.6) !important;
+  }
+}
+
+// drop-dowm
+
+.adm-dropdown-popup-mask {
+  background-color: rgba(17, 36, 56, 0.6) !important;
+}
+
+.adm-dropdown-item-highlight {
+  color: #34D026;
+}
+
+.adm-dropdown-open .adm-dropdown-nav {
+  border-bottom: none;
+}
+
+
+.adm-dropdown-item .adm-dropdown-item-title-arrow-active,
+.adm-dropdown-item .adm-dropdown-item-title-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.adm-dropdown-item .adm-dropdown-item-title-arrow-active {
+  svg {
+    color: #34D026;
+
+    path {
+      stroke: currentColor;
+    }
+  }
+}
+
+// FloatingBubble
+.adm-floating-bubble-button {
+  background: #34D026;
+}
+
+// modal 
+.adm-modal-content {
+  .adm-auto-center-content {
+    text-align: center;
+    color: rgba(17, 36, 56, 0.8);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.adm-modal-footer .adm-space-item {
+  background: #34D026;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 6px;
+
+  .adm-modal-button {
+    padding: 0;
+    >span {
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

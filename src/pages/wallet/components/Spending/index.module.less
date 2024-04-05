@@ -1,0 +1,56 @@
+.spending-box {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+
+  .default_chain {
+    width: 100%;
+    margin: 20px auto 16px auto;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #112438;
+    display: flex;
+    align-items: center;
+
+    > img {
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+      border-radius: 8px;
+    }
+  }
+
+  .record-body {
+    position: relative;
+    flex: 1;
+    height: calc(100% - 174px);
+    display: flex;
+    flex-direction: column;
+
+    .in-progress {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0 16px 0;
+      line-height: 19px;
+
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .all-records {
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: underline;
+        opacity: 0.6;
+        align-self: end;
+        cursor: pointer;
+
+        &:hover {
+          color: #34d026;
+        }
+      }
+    }
+  }
+}

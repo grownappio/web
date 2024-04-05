@@ -1,0 +1,41 @@
+.question-box {
+  height: -webkit-fill-available;
+  background: #fff;
+  
+  .toolbar > * {
+    padding: 14px 0 !important;
+    width: unset !important;
+    height: 48px !important;
+    text-align: center;
+    background: #F5F6F7 !important;
+    border-style: solid !important;
+
+    &:first-child {
+      > :first-child {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        outline: 0;
+
+        &::before {
+          vertical-align: top;
+        }
+      }
+
+      svg {
+        right: 16px !important;
+      }
+    }
+
+
+    > :first-child {
+      float: unset;
+      width: unset;
+      margin: 0 auto;
+    }
+
+    svg {
+      height: 100%;
+    }
+  }
+}

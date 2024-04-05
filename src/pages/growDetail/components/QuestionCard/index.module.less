@@ -1,0 +1,303 @@
+.question-detail {
+  border-radius: 6px;
+  padding: 0 16px;
+  margin: 16px;
+  background: #F6F9FC;
+  border: 1px solid rgba(17, 36, 56, 0.08);
+
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    position: relative;
+
+    .header-left {
+      width: 0;
+      flex: 1;
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: 400;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+
+      .user-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+
+        outline: 1.5px solid #ECEDEF;
+      }
+
+      .user-name {
+        margin-left: 8px;
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(17, 36, 56, 0.6);
+      }
+
+      .answer-time {
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(17, 36, 56, 0.4);
+        margin-left: 8px;
+        white-space: nowrap;
+      }
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+
+      .answer-type {
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >img {
+          width: 24px;
+          height: 24px;
+        }
+
+        .type-tip {
+          word-break: keep-all;
+          z-index: 223;
+          background: #34D026;
+          border-radius: 4px;
+          padding: 0 12px;
+          // width: 481px;
+          height: 32px;
+          font-weight: 400;
+          font-size: 16px;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          // right: -3px;
+          top: -40px;
+          white-space: nowrap;
+
+          &.left-tip {
+            left: -20px;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -5px;
+              right: 162px;
+              width: 10px;
+              height: 10px;
+              background: #34D026;
+              border-radius: 1px;
+              transform: rotate(45deg);
+            }
+          }
+
+          &.right-tip {
+            right: -20px;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -5px;
+              right: 69px;
+              width: 10px;
+              height: 10px;
+              background: #34D026;
+              border-radius: 1px;
+              transform: rotate(45deg);
+            }
+          }
+
+        }
+
+        &:hover {
+          background: rgba(17, 36, 56, 0.04);
+
+          >img {
+            content: url('../../../../assets/img/grow/private-select.svg');
+          }
+        }
+      }
+
+      .spot-box {
+        height: 32px;
+        width: 32px;
+        margin-left: 6px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >img {
+          width: 24px;
+          height: 24px;
+        }
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.04);
+
+          >img {
+            content: url('../../../../assets/img/grow/spot-box-enter.svg');
+          }
+        }
+      }
+    }
+  }
+
+  .answer-user-info {
+    display: flex;
+    margin-top: 18px;
+    justify-content: space-between;
+
+    .answer-user-info-left {
+      display: flex;
+    }
+  }
+
+  .question-desc-box {
+    font-weight: 400;
+
+    .desc-box {
+      margin: 12px 0;
+      font-size: 16px !important;
+      word-break: break-word;
+      hyphens: auto;
+      //margin-bottom: 8px;
+      color: #112438;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  .bottom-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    margin-top: 12px;
+
+    position: relative;
+
+    &.top12 {
+      margin-top: 12px;
+    }
+
+    .question-btn {
+
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: #34D026;
+      border-radius: 6px;
+      padding: 8px 16px;
+      height: 32px;
+      flex-shrink: 0;
+
+      &.active {
+        background: rgba(52, 208, 38, 0.4);
+      }
+
+      >img {
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        margin-right: 4px;
+      }
+
+      >span {
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFFFF;
+      }
+    }
+
+    .check-answer {
+      display: flex;
+      white-space: nowrap;
+      position: absolute;
+      left: 132px;
+      bottom: 12px;
+      text-decoration: underline;
+      color: #34D026;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+  .answer-btns {
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+    justify-content: space-between;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      border-radius: 6px;
+      width: 80px;
+      color: rgba(17, 36, 56, .6);
+
+      >div {
+        display: flex;
+        padding: 8px 12px;
+        height: 32px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+
+        &:active {
+          border-radius: 6px;
+          background: rgba(0, 0, 0, 0.04);
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+          box-shadow: unset;
+        }
+
+        .triangle-black-img {
+          margin-right: 5px;
+          width: 5PX;
+          height: 8PX;
+          content: url(../../../../assets/img/grow/triangle-black.svg);
+        }
+
+        >span {
+          display: inline-block;
+          margin-left: 8px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+}
+
+.question-del {
+  width: 784px;
+  height: 120px;
+  background: url(../../../../assets/img/grow/no-question-bgbg.png);
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(17, 36, 56, 0.6);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+// background: url(../../../../assets/img/grow/no-question-bgbg.png);

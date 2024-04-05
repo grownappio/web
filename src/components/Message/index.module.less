@@ -1,0 +1,132 @@
+.pop-message {
+    position: fixed;
+
+    top: -100px;
+    // left: 50%;
+    width: 100%;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top ease .4s;
+
+    .show-success,
+    .show-error,
+    .show-info,
+    .show-warn {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 12px;
+        padding: 0 16px;
+
+        text-align: left;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 10px;
+        box-shadow: 0 3px 6px -4px #1124381f, 0 6px 16px #11243814, 0 9px 28px 8px #1124380d;
+        color: #005CFF;
+
+        img {
+            width: 16px;
+            height: 16px;
+            margin-right: 6px;
+        }
+    }
+
+    .show-success {
+        color: #005CFF;
+    }
+
+    .show-error {
+        color: #FF0000;
+    }
+    .show-info {
+        color: #112438;
+    }
+
+    .show-warn {
+        color: #FF9900;
+    }
+}
+
+@media (min-width:@MaxWidth) {
+
+    .pop-message {
+        height: 30px;
+
+        .show-success,
+        .show-error,
+        .show-info,
+        .show-warn {
+            height: 36px;
+        }
+    }
+
+}
+
+
+
+
+@import "@/assets/globalStyle/public.style.less";
+
+@media (max-width:@MaxWidth) {
+    .pop-message {
+        position: fixed;
+        top: -100px;
+        // left: 50%;
+        width: 100%;
+        right: 0;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: top ease .4s;
+        .show-success,
+        .show-error,
+        .show-info,
+        .show-warn {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+
+            text-align: left;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 10px;
+            box-shadow: 0 3px 6px -4px #1124381f, 0 6px 16px #11243814, 0 9px 28px 8px #1124380d;
+            color: #005CFF;
+
+
+            padding: 22px 24px;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 36px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            img {
+                width: 36px;
+                height: 36px;
+                margin-right: 13px;
+            }
+        }
+
+        .show-success {
+            color: #005CFF;
+        }
+
+        .show-error {
+            color: #FF0000;
+        }
+        .show-info {
+            color: #112438;
+        }
+
+        .show-warn {
+            color: #FF9900;
+        }
+    }
+}

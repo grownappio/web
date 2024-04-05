@@ -1,0 +1,238 @@
+.sub-wallet-box {
+  text-align: center;
+  .switch-chain {
+    margin: 24px auto 20px auto;
+    background: white;
+
+    .default_chain {
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      color: #112438;
+      display: flex;
+      align-items: center;
+
+      >img {
+        width: 24px;
+        height: 24px;
+        margin-left: 8px;
+      }
+
+      .switch-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        >img {
+          width: 24px;
+          height: 24px;
+          border-radius: 6px;
+          margin-right: 8px;
+        }
+
+        .chain-list {
+          position: absolute;
+          z-index: 2;
+          top: 32px;
+          left: -18px;
+          width: 276px;
+          background: #FFFFFF;
+          border: 1px solid rgba(17, 36, 56, 0.08);
+          box-shadow: 0px 4px 16px rgba(17, 36, 56, 0.16);
+          border-radius: 8px;
+          padding: 8px;
+          cursor: pointer;
+
+          .option-item {
+
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 8px;
+
+            >img {
+              width: 20px;
+              height: 20px;
+            }
+
+            .option-left {
+              display: flex;
+              align-content: center;
+
+              >img {
+                width: 24px;
+                height: 24px;
+                border-radius: 8px;
+              }
+
+              >span {
+
+                margin-left: 8px;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 22px;
+                text-align: left;
+
+              }
+            }
+
+            &.active {
+              background: #34D02614;
+              border-radius: 6px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .address {
+    background: rgba(17, 36, 56, 0.06);
+    border-radius: 6px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: rgba(17, 36, 56, .6);
+    padding: 0 12px;
+    position: relative;
+
+    >span {
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    >img {
+      width: 10px;
+      height: 12px;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .wallet-list {
+    padding: 2px 24px;
+    margin: auto;
+    border-radius: 8px;
+    background: #F6F9FC;
+    border: 1px solid rgba(17, 36, 56, 0.08);
+
+    position: relative;
+
+    .wallet-option {
+      border-bottom: 1px solid rgba(17, 36, 56, 0.08);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+
+
+      .option-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >img {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+        }
+
+        >span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          margin-left: 8px;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .num {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-left: 12px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: right;
+      }
+
+
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
+    }
+
+
+
+
+  }
+
+  .no-wallet-btns {
+    padding-top: 24px;
+
+    >div {
+      width: 472px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 32px;
+      cursor: pointer;
+    }
+
+    .create-btn {
+      border: 2px solid #34D026;
+      font-weight: 700;
+      font-size: 16px;
+      color: #34D026;
+    }
+
+    .import-btn {
+      background: #34D026;
+      box-shadow: 0px 4px 16px rgba(65, 199, 103, 0.5);
+      font-weight: 700;
+      font-size: 16px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.wallet-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4px 0 32px 0;
+
+  .option {
+    cursor: pointer;
+    border: 1px solid rgba(17, 36, 56, 0.12);
+    border-radius: 6px;
+    padding: 8px 7px;
+    width: 59px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+
+    >img {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 4px;
+    }
+
+    >span {
+      color: #112438;
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+}

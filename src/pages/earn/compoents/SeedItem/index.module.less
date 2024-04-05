@@ -1,0 +1,237 @@
+.seed-item {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  transition: .4s;
+
+  &.hide {
+    opacity: .2;
+    transform: scale(.5);
+  }
+
+  .seed-body {
+    height: 179px;
+    background-size: cover;
+    position: relative;
+
+    .seed-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+    }
+
+    .seed-tag {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 8px;
+      left: -4px;
+
+      .seed-type,
+      .seed-time {
+        width: 73px;
+        height: 27px;
+        border-radius: 6px 0px 0px 6px;
+        background: #FFA404;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+      }
+
+      .seed-time {
+        width: 65px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 0px 6px 6px 0px;
+        color: #FFA404;
+        letter-spacing: -1px;
+      }
+
+    }
+
+    .earn-amount-box {
+      background: linear-gradient(180deg, rgba(17, 36, 56, 0) 0%, rgba(17, 36, 56, 0.4) 100%);
+      width: 100%;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 6px 6px 8px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      .title {
+        font-weight: 500;
+        font-size: 12px;
+        color: #FFFFFF;
+      }
+
+      .amount {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        >span {
+          font-weight: 500;
+          font-size: 14px;
+          color: #FFFFFF;
+        }
+
+        >img {
+          width: 17px;
+          height: 17px;
+          margin-left: 2px;
+        }
+
+      }
+    }
+
+    &.matured {
+      // background-image: url(../../../../assets/img/earn/seed/matured.svg);
+    }
+
+    &.growing {
+      // background-image: url(../../../../assets/img/earn/seed/growing.svg);
+
+      .seed-tag {
+        .seed-type {
+          background: #34D026;
+        }
+
+        .seed-time {
+          background: rgba(255, 255, 255, 0.6);
+          color: #34D026;
+        }
+      }
+    }
+
+    &.harvested {
+      // background-image: url(../../../../assets/img/earn/seed/harvested1.svg);
+
+      .seed-tag {
+        .seed-type {
+          background: #0A77F7;
+          width: 86px;
+          border-radius: 6px;
+        }
+      }
+    }
+
+    &.lost {
+      // background-image: url(../../../../assets/img/earn/seed/lost.svg);
+
+      .seed-tag {
+        .seed-type {
+          background: #AAAFB5;
+          width: 72px;
+          border-radius: 6px;
+        }
+      }
+    }
+
+    .water-video {
+      width: 100%;
+      height: 100%;
+      border-radius: 6px 6px 0 0;
+      object-fit: cover;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .seed-by {
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(17, 36, 56, 0.6);
+    margin: 8px 0 0 8px;
+  }
+
+  .source {
+    color: #34D026;
+    text-decoration-line: underline;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 3px 0 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .time {
+    color: #112438;
+    opacity: 0.5;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 8px 0 8px 8px;
+  }
+
+  &.seed-left {
+    margin-right: 0;
+  }
+
+  .water-btn-box {
+    overflow: hidden;
+    height: 32px;
+
+    .water-btn {
+      background: #34D026;
+      backdrop-filter: blur(2px);
+      border-radius: 0px 0px 6px 6px;
+      width: 100%;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all .3s;
+
+      .btn-left {
+        flex: 1;
+        text-align: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        color: #FFFFFF;
+        font-weight: 500;
+      }
+
+      .icon-box-hidden {
+        height: 100%;
+        overflow: hidden;
+
+        >div {
+          height: 100%;
+          width: 100%;
+          transition: all .5s;
+        }
+      }
+
+      &.no-water {
+        &:hover {
+          background-color: #30BE23;
+        }
+      }
+
+      &.is-water {
+        background-color: #AEECA8;
+
+        .icon-box-hidden {
+          >div {
+            transform: translate(0, -32px);
+          }
+        }
+      }
+    }
+
+    .to-havest {
+      background: #FFA404;
+
+      &:hover {
+        background: #FB8802;
+      }
+    }
+  }
+}
